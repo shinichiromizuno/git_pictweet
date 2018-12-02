@@ -1,0 +1,8 @@
+<div class="contents row">
+  <%= form_tag('/tweets', method: :post) do %>
+    <h3>入力内容の確認</h3>
+    <h4>Image URL: <%= @tweet_confirm[:image] %><%= hidden_field_tag :image, @tweet_confirm[:image] %></h4>
+    <h4>Text: <%= @tweet_confirm[:text] %><%= hidden_field_tag :text, @tweet_confirm[:text] %></h4>
+    <%= submit_tag '投稿する!', name: 'send' %>
+  <% end %>
+</div>
